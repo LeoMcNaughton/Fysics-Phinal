@@ -54,10 +54,16 @@ terminal.question("What type of equation are you looking for?",function(str){
     });
   }
  });
-    else if(str == "energy"){
+    if(str == "energy"){
       terminal.question("What are you looking for?",function(str){
         str = str.toLowerCase();
         if(str == "ke"){
+          printOptions();
+        }
+        else if(str == "m"){
+          printOptions();
+        }
+        else if(str == "v"){
           printOptions();
         }
       });
