@@ -34,40 +34,53 @@ function getinput(){
   });
 
 terminal.question("What type of equation are you looking for?",function(str){
-
+    str.toLowerCase();
     //you will configure your series of questions inside here.
     if(str == "motion"){
     terminal.question("What are you looking for?",function(str){
       str = str.toLowerCase();
       if(str == "d"){
         printOptions();
+        console.log()
       }
       else if(str == "v"){
         printOptions();
+        console.log()
       }
       else if(str == "t"){
         printOptions();
+        console.log()
       }
       else if(str == "a"){
        printOptions();
+       console.log()
       }
     });
   }
- });
-    if(str == "energy"){
+
+    else if(str == "energy"){
       terminal.question("What are you looking for?",function(str){
         str = str.toLowerCase();
         if(str == "ke"){
           printOptions();
+          terminal.question("",function(list){
+            
+          });
         }
         else if(str == "m"){
           printOptions();
+          console.log()
         }
         else if(str == "v"){
           printOptions();
+          console.log()
         }
       });
     }
-}
+    else{
+      console.log("I'm sorry I don't know how to calculate that yet...");
+    }
 
+});
+}
 getinput();
