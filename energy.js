@@ -5,11 +5,11 @@ exports.kineticEnergy = function(m,v){
   let ke = 0.5*m*v*v;
   return ke;
 };
-exports.mass = function(){
-  let m = (2*k)/v*v;
+exports.mass = function(ke,v){
+  let m = (2*ke)/v*v;
   return m;
 };
-exports.velocity = function(){
-  let v = Math.sqrt((2*k)/m)
+exports.velocity = function(m,ke){
+  let v = Math.sqrt((2*ke)/m)
   return v;
 };

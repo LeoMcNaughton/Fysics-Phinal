@@ -53,7 +53,11 @@ terminal.question("What type of equation are you looking for?",function(str){
       }
       else if(str == "a"){
        printOptions();
-       console.log()
+       terminal.question("",function(str){
+       let arr = convertToArray(str);
+       console.log(motion.acceleration(arr[0],arr[1],arr[3]));
+       terminal.close();
+       });
       }
     });
   }
@@ -63,17 +67,27 @@ terminal.question("What type of equation are you looking for?",function(str){
         str = str.toLowerCase();
         if(str == "ke"){
           printOptions();
-          terminal.question("",function(list){
-            
+          terminal.question("",function(str){
+          let arr = convertToArray(str);
+          console.log(energy.kineticEnergy(arr[1],arr[4]));
+          terminal.close();
           });
         }
         else if(str == "m"){
           printOptions();
-          console.log()
+          terminal.question("",function(str){
+          let arr = convertToArray(str);
+          console.log(energy.mass(arr[1],arr[5]));
+          terminal.close();
+          });
         }
         else if(str == "v"){
           printOptions();
-          console.log()
+          terminal.question("",function(str){
+          let arr = convertToArray(str);
+          console.log(energy.velocity(arr[4],arr[5]));
+          terminal.close();
+          });
         }
       });
     }
