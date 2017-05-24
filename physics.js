@@ -41,15 +41,44 @@ terminal.question("What type of equation are you looking for?",function(str){
       str = str.toLowerCase();
       if(str == "d"){
         printOptions();
-        console.log()
+        terminal.question("",function(str){
+          let arr = convertToArray(str);
+          console.log(motion.distance1(str[1],str[3]));
+          terminal.close();
+        }
+        else{
+          let arr = convertToArray(str);
+          console.log(motion.distance2(str[1],str[2],str[3]));
+          terminal.close();
+        }
+        });
       }
       else if(str == "v"){
         printOptions();
-        console.log()
+        terminal.question("",function(str){
+          let arr = convertToArray(str);
+          console.log(motion.velocity1(str[1],str[3]));
+          terminal.close();
+        }
+        else{
+          let arr = convertToArray(str;)
+          console.log(motion.velocity2(str[0],str[2],str[3]));
+          terminal.close();
+        }
+        });
       }
       else if(str == "t"){
         printOptions();
-        console.log()
+        terminal.question("",function(str){
+        let arr = convertToArray(str);
+        console.log(motion.time1(str[0],str2[1]));
+        terminal.close();
+      }
+      else{
+        let arr = convertToArray(str);
+        console.log(motion.time2(str[0]str[1],str[2]));
+        terminal.close();
+        });
       }
       else if(str == "a"){
        printOptions();
